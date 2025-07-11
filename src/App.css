@@ -2,7 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #4a90e2, #9013fe);
+
+  /* 🌟 Beautiful background image */
+  background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -16,10 +22,10 @@ body {
 }
 
 .form-card {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.92); /* Slightly transparent so background image shows through */
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
 }
@@ -31,7 +37,8 @@ body {
 }
 
 .form-card input[type="email"],
-.form-card input[type="file"] {
+.form-card input[type="file"],
+.form-card input[type="datetime-local"] {
   margin-bottom: 15px;
   padding: 12px;
   border: 1px solid #ccc;
@@ -41,7 +48,8 @@ body {
 }
 
 .form-card input[type="email"]:focus,
-.form-card input[type="file"]:focus {
+.form-card input[type="file"]:focus,
+.form-card input[type="datetime-local"]:focus {
   border-color: #4a90e2;
 }
 
@@ -67,16 +75,9 @@ body {
   color: #555;
 }
 
-.form-card input[type="datetime-local"] {
-  margin-bottom: 15px;
-  padding: 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s;
-}
-
-.form-card input[type="datetime-local"]:focus {
-  border-color: #4a90e2;
+.logo-img {
+  width: 120px;
+  margin: 0 auto 20px auto;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3)); /* makes icon pop on bright backgrounds */
 }
